@@ -1,0 +1,219 @@
+
+describe("Declarando variables", () => {
+    describe("1.- variable tipo let de nombre 'variableSinValor' está declarada sin valor", () => {
+        it("Es de tipo let", () => {
+            expect(() => 
+            {
+                try {
+                    let oldValue = variableSinValor
+                    variableSinValor++;
+                    variableSinValor = oldValue;
+                } 
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).not.toThrow();
+        });
+        it("no tiene valor asignado", () => {
+            expect(variableSinValor).toBeUndefined();
+        });
+    });
+    describe("2.- variable tipo let de nombre 'variableValorNumerico' está declarada con valor numérico", () => {
+        it("Es de tipo let", () => {
+            expect(() => {
+                try {
+                    let oldValue = variableValorNumerico;
+                    variableValorNumerico++;
+                    variableValorNumerico = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).not.toThrow();
+        });
+        it("tiene valor numérico", () => {
+            expect(variableValorNumerico).toEqual(jasmine.any(Number));
+        });
+    });
+    describe("3.- variable tipo const de nombre 'miNombre' está declarada con valor de tu nombre", () => {
+        it("Es de tipo const", () => {
+            expect(() => {
+                try {
+                    let oldValue = miNombre;
+                    miNombre++;
+                    miNombre = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).toThrow();
+        });
+        it("tiene valor cadena de texto", () => {
+            expect().toBe();
+        });
+    });
+    describe("4.- 2 variables tipo let de nombres 'booleano1' y 'booleano2' está declarada y es de tipo booleano", () => {
+        it("booleano1 es de tipo let", () => {
+            expect(() => {
+                try {
+                    let oldValue = booleano1;
+                    booleano1++;
+                    booleano1 = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).not.toThrow();
+        });
+        it("booleano1 es booleano", () => {
+            expect(booleano1).toEqual(jasmine.any(Boolean));
+        });
+        it("booleano2 es de tipo let", () => {
+            expect(() => {
+                try {
+                    let oldValue = booleano2;
+                    booleano2++;
+                    booleano2 = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).not.toThrow();
+        });
+        it("booleano2 es booleano", () => {
+            expect(booleano2).toEqual(jasmine.any(Boolean));
+        });
+    });
+    describe("5.- variable tipo const de nombre 'PI' está declarada con valor de 3,14", () => {
+        it("Es de tipo const", () => {
+            expect(() => {
+                try {
+                    let oldValue = PI;
+                    PI++;
+                    PI = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).toThrow();
+        });
+        it("tiene valor 3.14", () => {
+            expect(PI).toBe(3.14);
+        });
+    });
+    describe("6.- variable tipo const de nombre 'TAU' está declarada con valor de 2 veces PI", () => {
+        it("Es de tipo const", () => {
+            expect(() => {
+                try {
+                    let oldValue = TAU;
+                    TAU++;
+                    TAU = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const");
+                }
+            }).toThrow();
+        });
+        it("tiene valor 2PI", () => {
+            expect(TAU).toBe(2*PI);
+        });
+    });
+    describe("7.- variable tipo const de nombre 'MiNumeroFav' está declarada con valor numérico", () => {
+        it("Es de tipo const", () => {
+            expect(() => {
+                try {
+                    let oldValue = MiNumeroFav;
+                    MiNumeroFav++;
+                    MiNumeroFav = oldValue;
+                }
+                catch {
+                    throw ("variable de tipo const")
+                }
+            }).toThrow();
+        });
+        it("tiene valor numérico", () => {
+            expect(MiNumeroFav).toEqual(jasmine.any(Number));
+        });
+    });
+});
+
+describe("Booleanos", () => {
+    it("8.- variable 'booleanoAnd' cuyo valor sea la comparación booleana 'booleano1 and booleano2'", () => {
+        expect(booleanoAnd).toBe(booleano1 && booleano2);
+    });
+    it("9.- variable 'booleanoOr' cuyo valor sea la comparación booleana 'booleano1 or booleano2'", () => {
+        expect(booleanoOr).toBe(booleano1 || booleano2);
+    });
+    it("10.- variable 'booleanoNot' cuyo valor sea la comparación booleana 'no booleano1'", () => {
+        expect(booleanoNot).toBe(!booleano1);
+    });
+    it("11.- variable 'booleanoMix0' cuyo valor sea la comparación booleano '(booleano1 or booleano2) and (booleano1 or (not booleano1 and not booleano2)'", () => {
+        expect(booleanoMix0).toBe((booleano1 || booleano2) && (booleano1 || (!booleano1 && !booleano2)));
+    });
+    it("12.- variable 'booleanoMix1' cuyo valor sea la compración booleana '(booleano1 and TAU/2 sea igual a PI) or (variableValorNumerico mayor o igual que MiNumeroFav)'", () => {
+        expect(booleanoMix1).toBe((booleano1 && TAU/2 === PI) || (variableValorNumerico >= MiNumeroFav));
+    });
+    it("13.- variable 'booleanoMix2' cuyo valor sea la comparación booleana 'variableValorNumerico positivo o menor que -(MiNumeroFav * TAU)", () => {
+        expect(booleanoMix2).toBe(variableValorNumerico > 0 || variableValorNumerico < -(MiNumeroFav * TAU));
+    });
+    it("14.- variable 'seisNoEsNueve' cuyo valor sea la comparación booleana '6 no es igual que 9'", () => {
+        expect(seisNoEsNueve).toBe(6 != 9);
+    });
+});
+
+describe("Operadores", () => {
+    it("15.- variable 'valorSuma' cuyo valor sea la suma de MiNumeroFav y variableValorNumerico", () => {
+        expect(valorSuma).toBe(MiNumeroFav + variableValorNumerico);
+    });
+    it("16.- variable 'valorResta' cuyo valor sea la resta de MiNumeroFav menos variableValorNumerico", () => {
+        expect(valorResta).toBe(MiNumeroFav - variableValorNumerico);
+    });
+    it("17.- variable 'valorMultiplicacion' cuyo valor sea la multiplicación de MiNumeroFav por variableValorNumerico", () => {
+        expect(valorMultiplicacion).toBe(MiNumeroFav * variableValorNumerico);
+    });
+    it("18.- variable 'valorDivision' cuyo valor sea la division de MiNumeroFav entre 3", () => {
+        expect(valorDivision).toBe(MiNumeroFav / 3);
+    });
+    describe("19.- crea la variable 'incrementarDesp' con valor 2 y asigna su valor con postincremento a 'resultadoDesp'", () => {
+        it("incrementarDesp vale 2", () => {
+            expect(incrementarDesp).toBe(3);
+        });
+        it("resultadoDesp tienen el valor correcto", () => {
+            expect(resultadoDesp).toBe(2);
+        });
+    });
+    describe("20.- crea la variable 'incrementarAntes' con valor 2 y asigna su valor con preincremento a 'resultadoAntes'", () => {
+        it("incrementarAntes vale 2", () => {
+            expect(incrementarAntes).toBe(3);
+        });
+        it("resultadoAntes tienen el valor correcto", () => {
+            expect(resultadoAntes).toBe(3);
+        });
+    });
+});
+
+describe("Bucles", () => {
+    it("21.- crea la variable 'contarHasta10' con valor 0 e incrementa su valor con un bucle while hasta que se verifique contarHasta10 === 10", () => {
+        expect(contarHasta10).toBe(10);
+    });
+    
+    it("22.- crea la variable 'contarHasta10_2' con valor 0 e incrementa su valor con un bucle while hasta que se verifique contarHasta10_2 === 10", () => {
+        expect(contarHasta10_2).toBe(10);
+    });
+
+    it("23.- crea la variable 'postI' y 'postJ' con valor 0 e incrementar su valor con un bucle que itere hasta que i > 10, en cada iteración se deberá sumar el valor de j++ a la variable i", () => {
+        
+    });
+
+    describe("24.- ", () => {
+
+    });
+
+    describe("25.- ", () => {
+
+    });
+
+    describe("26.- ", () => {
+
+    });
+});
