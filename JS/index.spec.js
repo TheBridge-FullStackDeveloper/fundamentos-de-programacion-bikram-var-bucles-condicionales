@@ -138,7 +138,7 @@ describe("Pair Programming", () => {
         });
     });
 });
-describe("Kata", () => {
+describe("proyecto", () => {
     describe("Declarando variables", () => {
         describe("13.- variable tipo let de nombre 'variableValorNumerico' está declarada con valor numérico", () => {
             it("Es de tipo let", () => {
