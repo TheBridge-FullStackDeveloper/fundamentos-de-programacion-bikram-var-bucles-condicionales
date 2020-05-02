@@ -2,13 +2,12 @@ describe("Pair Programming", () => {
     describe("Declarando variables", () => {
         describe("1.- variable tipo let de nombre 'variableSinValor' está declarada sin valor", () => {
             it("Es de tipo let", () => {
-                expect(() => 
-                {
+                expect(() => {
                     try {
                         let oldValue = variableSinValor
                         variableSinValor++;
                         variableSinValor = oldValue;
-                    } 
+                    }
                     catch {
                         throw ("variable de tipo const");
                     }
@@ -81,7 +80,7 @@ describe("Pair Programming", () => {
                 }).toThrow();
             });
             it("tiene valor 2PI", () => {
-                expect(TAU).toBe(2*PI);
+                expect(TAU).toBe(2 * PI);
             });
         });
     });
@@ -97,7 +96,6 @@ describe("Pair Programming", () => {
             expect(booleanoMix0).toBe((booleano1 || booleano2) && (booleano1 || (!booleano1 && !booleano2)));
         });
     });
-
     describe("Operadores", () => {
         describe("8.- crea la variable 'incrementarDesp' con valor 2 y asigna su valor con postincremento a 'resultadoDesp'", () => {
             it("incrementarDesp vale 2", () => {
@@ -116,27 +114,30 @@ describe("Pair Programming", () => {
             });
         });
     });
-
-    describe("Bucles", () => {        
+    describe("Bucles", () => {
         it("10.- crea la variable 'contarHasta10_2' con valor 0 e incrementa su valor con un bucle while hasta que se verifique contarHasta10_2 === 10", () => {
             expect(contarHasta10_2).toBe(10);
         });
         it("11.- crea la variable 'postI' y 'postJ' con valor 0 e incrementar su valor con un bucle que itere hasta que i > 10, en cada iteración se deberá sumar el valor de j++ a la variable i", () => {
-            let i = 0, j = 0;
-            while(i <= 10)
+            let i = 0, j = 0, k = 0;;
+            while (k <= 10)
+            {
+                k++;
                 i += j++;
+            }
             expect(postI === i && postJ === j).toBeTruthy();
         });
         it("12.- crea la variable 'sumaPares' con valor 0 a continuación crea un bucle que itere 10 veces (i < 10), si la iteración es par se deberá asumar a sumaPares el número de la iteración actual (i)", () => {
             let i = 0, res = 0;
-            while(i < 10)
+            while (i < 10) {
                 if (i % 2 === 0)
                     res += i;
+                i++;
+            }
             expect(sumaPares).toBe(res);
         });
     });
 });
-
 describe("Kata", () => {
     describe("Declarando variables", () => {
         describe("13.- variable tipo let de nombre 'variableValorNumerico' está declarada con valor numérico", () => {
@@ -156,13 +157,13 @@ describe("Kata", () => {
                 expect(variableValorNumerico).toEqual(jasmine.any(Number));
             });
         });
-        describe("14.- variable tipo const de nombre 'miNombre' está declarada con valor de tu nombre", () => {
+        describe("14.- variable tipo const de nombre 'MiNombre' está declarada con valor de tu nombre", () => {
             it("Es de tipo const", () => {
                 expect(() => {
                     try {
-                        let oldValue = miNombre;
-                        miNombre++;
-                        miNombre = oldValue;
+                        let oldValue = MiNombre;
+                        MiNombre++;
+                        MiNombre = oldValue;
                     }
                     catch {
                         throw ("variable de tipo const");
@@ -170,7 +171,7 @@ describe("Kata", () => {
                 }).toThrow();
             });
             it("tiene valor cadena de texto", () => {
-                expect().toBe();
+                expect(MiNombre).toEqual(jasmine.any(String));
             });
         });
         describe("15.- variable tipo const de nombre 'MiNumeroFav' está declarada con valor numérico", () => {
@@ -202,8 +203,8 @@ describe("Kata", () => {
         it("18.- variable 'booleanoMix2' cuyo valor sea la comparación booleana 'variableValorNumerico positivo o menor que -(MiNumeroFav * TAU)", () => {
             expect(booleanoMix2).toBe(variableValorNumerico > 0 || variableValorNumerico < -(MiNumeroFav * TAU));
         });
-        it("19.- variable 'seisNoEsNueve' cuyo valor sea la comparación booleana '6 no es igual que 9'", () => {
-            expect(seisNoEsNueve).toBe(6 != 9);
+        ("19.- variable 'seisNoEsNueve' cuyo valor sea la comparación booleana '6 no es igual que 9'", () => {
+            expect(seisNoEsNueve).toBe(6 !== 9);
         });
     });
 
@@ -227,16 +228,22 @@ describe("Kata", () => {
             expect(contarHasta10).toBe(10);
         });
         it("25.- crea la variable 'preI' y 'preJ' con valor 0 e incrementar su valor con un bucle que itere hasta que i > 10, en cada iteración se deberá sumar el valor de j++ a la variable i", () => {
-            let i = 0, j = 0;
-            while (i <= 10)
+            let i = 0, j = 0, k = 0;
+            while (k <= 10)
+            {
+                k++;
                 i += ++j;
+            }
             expect(preI === i && preJ === j).toBeTruthy();
         });
         it("26.- crea la variable 'sumaImpares' con valor 0 a continuación crea un bucle que itere 10 veces (i < 10), si la iteración es impar se deberá asumar a sumaPares el número de la iteración actual (i)", () => {
             let i = 0, res = 0;
             while (i < 10)
+            {
                 if (i % 2 === 1)
                     res += i;
+                i++;
+            }
             expect(sumaImpares).toBe(res);
         });
     });
