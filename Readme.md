@@ -78,7 +78,7 @@ En esta ocasión, el bikram se dividirá en :crossed_swords: Pair Programming :c
 
 ### Bucles ###
 
-- [ ] 24.- Crear variable **contarHasta10** con valor **0** e incrementar su valor con un **bucle while hasta que se veirfique que contarHasta10 === 10**
+- [ ] 24.- Crear variable **contarHasta10** con valor **0** e incrementar su valor con un **bucle while hasta que se verifique que contarHasta10 === 10**
 
 - [ ] 25.- Crear las variables **preI** y **preJ** con valor **0** a continuación crea un bucle que **itere hasta que preI > 10** en cada iteración se deberá **sumar el valor de ++preJ a la variable preI**
 
