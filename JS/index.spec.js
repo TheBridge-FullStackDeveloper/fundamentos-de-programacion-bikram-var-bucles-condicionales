@@ -200,11 +200,11 @@ describe("proyecto", () => {
         it("17.- variable 'booleanoMix1' cuyo valor sea la compración booleana '(booleano1 and TAU/2 sea igual a PI) or (variableValorNumerico mayor o igual que MiNumeroFav)'", () => {
             expect(booleanoMix1).toBe((booleano1 && TAU / 2 === PI) || (variableValorNumerico >= MiNumeroFav));
         });
-        it("18.- variable 'booleanoMix2' cuyo valor sea la comparación booleana 'variableValorNumerico positivo o menor que -(MiNumeroFav * TAU)", () => {
-            expect(booleanoMix2).toBe(variableValorNumerico > 0 || variableValorNumerico < -(MiNumeroFav * TAU));
-        });
-        ("19.- variable 'seisNoEsNueve' cuyo valor sea la comparación booleana '6 no es igual que 9'", () => {
+        it("18.- variable 'seisNoEsNueve' cuyo valor sea la comparación booleana '6 no es igual que 9'", () => {
             expect(seisNoEsNueve).toBe(6 !== 9);
+        });
+        it("19.- variable 'booleanoMix2' cuyo valor sea la comparación booleana 'variableValorNumerico positivo o menor que -(MiNumeroFav * TAU)", () => {
+            expect(booleanoMix2).toBe(variableValorNumerico > 0 || variableValorNumerico < -(MiNumeroFav * TAU));
         });
     });
 
