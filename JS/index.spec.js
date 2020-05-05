@@ -115,10 +115,10 @@ describe("Pair Programming", () => {
         });
     });
     describe("Bucles", () => {
-        it("10.- crea la variable 'contarHasta10_2' con valor 0 e incrementa su valor con un bucle while hasta que se verifique contarHasta10_2 === 10", () => {
+        it("10.- crea la variable 'contarHasta10_2' con valor 0 e incrementa su valor con un bucle for hasta que se verifique contarHasta10_2 === 10", () => {
             expect(contarHasta10_2).toBe(10);
         });
-        it("11.- crea la variable 'postI' y 'postJ' con valor 0 e incrementar su valor con un bucle que itere hasta que i > 10, en cada iteración se deberá sumar el valor de j++ a la variable i", () => {
+        it("11.- crea la variable 'postI' y 'postJ' con valor 0 e incrementar su valor con un bucle que itere hasta que postI > 10, en cada iteración se deberá sumar el valor de postJ++ a la variable postI", () => {
             let i = 0, j = 0, k = 0;;
             while (k <= 10)
             {
@@ -227,7 +227,7 @@ describe("proyecto", () => {
         it("24.- crea la variable 'contarHasta10' con valor 0 e incrementa su valor con un bucle while hasta que se verifique contarHasta10 === 10", () => {
             expect(contarHasta10).toBe(10);
         });
-        it("25.- crea la variable 'preI' y 'preJ' con valor 0 e incrementar su valor con un bucle que itere hasta que i > 10, en cada iteración se deberá sumar el valor de j++ a la variable i", () => {
+        it("25.- crea la variable 'preI' y 'preJ' con valor 0 e incrementar su valor con un bucle que itere hasta que preI > 10, en cada iteración se deberá sumar el valor de ++preJ a la variable preI", () => {
             let i = 0, j = 0, k = 0;
             while (k <= 10)
             {
