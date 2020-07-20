@@ -41,7 +41,7 @@ En esta ocasión, el bikram se dividirá en :crossed_swords: Pair Programming :c
 
 - [ ] 10.- Crear variable **contarHasta10_2** con valor **0** e incrementar su valor con un **bucle for hasta que se verifique que contarHasta10_2 === 10** 
 
-- [ ] 11.- Crear las variables **postI** y **postJ** con valor **0** a continuación crea un bucle que **itere hasta que postI > 10** en cada iteración se deberá **sumar el valor de postJ++ a la variable postI**
+- [ ] 11.- Crear las variables **postI** y **postJ** con valor **0** a continuación cree **un bucle que itere 10 veces**. En cada iteración se deberá **sumar al valor de postI el valor de postJ++**
 
 - [ ] 12.- Crear la variable **sumaPares** con valor **0** a continuación crea un bucle que **itere 10 veces (i < 10)** si la iteración es par se deberá **sumar a sumaPares el número de la iteración actual (i)**
 
@@ -80,6 +80,6 @@ En esta ocasión, el bikram se dividirá en :crossed_swords: Pair Programming :c
 
 - [ ] 24.- Crear variable **contarHasta10** con valor **0** e incrementar su valor con un **bucle while hasta que se verifique que contarHasta10 === 10**
 
-- [ ] 25.- Crear las variables **preI** y **preJ** con valor **0** a continuación crea un bucle que **itere hasta que preI > 10** en cada iteración se deberá **sumar el valor de ++preJ a la variable preI**
+- [ ] 25.- Crear las variables **preI** y **preJ** con valor **0** a continuación cree **un bucle que itere 10 veces**. En cada iteración se deberá **sumar al valor de preI el valor de preJ++**
 
 - [ ] 26.- Crear la variable **sumaImpares** con valor **0** a continuación crea un bucle que **itere 10 veces (i < 10) si la iteración es impar se deberá sumar a sumaImpares el número de la iteración actual (i)**
