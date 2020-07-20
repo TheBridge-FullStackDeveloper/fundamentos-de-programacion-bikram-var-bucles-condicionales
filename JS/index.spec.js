@@ -227,7 +227,7 @@ describe("proyecto", () => {
         it("24.- crea la variable 'contarHasta10' con valor 0 e incrementa su valor con un bucle while hasta que se verifique contarHasta10 === 10", () => {
             expect(contarHasta10).toBe(10);
         });
-        it("25.- Crear las variables preI y preJ con valor 0 a continuación cree un bucle que itere 11 veces. En cada iteración se deberá sumar al valor de preI el valor de preJ++", () => {
+        it("25.- Crear las variables preI y preJ con valor 0 a continuación cree un bucle que itere 11 veces. En cada iteración se deberá sumar al valor de preI el valor de ++preJ", () => {
             let i = 0, j = 0, k = 0;
             while (k <= 10)
             {
