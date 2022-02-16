@@ -1,2 +1,2 @@
 let variableSinValor
-// let booleano1 = Boolean
+let booleano1 = Boolean
