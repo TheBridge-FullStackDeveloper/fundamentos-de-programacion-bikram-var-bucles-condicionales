@@ -52,8 +52,9 @@ const booleanoOr = booleano1 || booleano2
 
 const booleanoMix1 = (booleano1 && (TAU/2 === PI) || (variableValorNumerico >= MiNumeroFav))
 
-//const seisNoEsNueve = 6 !=== 9
+const seisNoEsNueve = 6 !== 9
 
+const booleanoMix2 = variableValorNumerico > 0 || variableValorNumerico < -(MiNumeroFav * TAU)
 
 
 
