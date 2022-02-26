@@ -85,4 +85,16 @@ const valorSuma = MiNumeroFav + variableValorNumerico
 //21
 const valorResta = MiNumeroFav - variableValorNumerico
 
+//22
+const valorMultiplicacion = MiNumeroFav * variableValorNumerico
+
+//23
+const valorDivision = MiNumeroFav / 3
+
+//24
+
+
+
+
+
 
