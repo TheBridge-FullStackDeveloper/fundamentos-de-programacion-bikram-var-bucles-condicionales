@@ -42,5 +42,14 @@ for (let i = 0; i < 10; i++) {
 
 
 
+let variableValorNumerico = 1
+
+const MiNombre = 'Nat'
+
+const MiNumeroFav = 58734
+
+
+
+
 
 
