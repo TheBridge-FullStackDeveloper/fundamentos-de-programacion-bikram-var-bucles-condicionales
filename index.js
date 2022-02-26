@@ -22,18 +22,16 @@ for (; contarHasta10_2 < 10; contarHasta10_2++) {
 
 
 let postI = 0
-
-for (; postI < 11; postI++) {
-    ;
-
-}
-
 let postJ = 0
 
-for (; postJ < 11; postJ++) {
-    ;
+
+for (let i = 0; i <= 10; i++) {
+    postI += postJ++
 
 }
+
+
+
 
 
 
