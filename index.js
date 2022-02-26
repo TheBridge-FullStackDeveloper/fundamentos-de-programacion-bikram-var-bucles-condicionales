@@ -48,6 +48,11 @@ const MiNombre = 'Nat'
 
 const MiNumeroFav = 58734
 
+const booleanoOr = booleano1 || booleano2
+
+const booleanoMix1 = (booleano1 && (TAU/2 === PI) || (variableValorNumerico >= MiNumeroFav))
+
+//const seisNoEsNueve = 6 !=== 9
 
 
 
